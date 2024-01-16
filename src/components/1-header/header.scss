@@ -1,0 +1,132 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 32px 50px 20px 50px;
+  border-bottom: 1px solid gray;
+
+  #mobile {
+    display: none;
+    cursor: pointer;
+
+    #bar {
+      display: flex;
+    }
+  }
+
+  #mobile #menu-icon {
+    color: var(--black-color);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      padding: 0px 12px;
+      position: relative;
+      :hover,
+      a.active {
+        color: var(--black-color);
+        text-decoration: underline;
+      }
+      a {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--gray-color);
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: fixed;
+    top: 128px;
+    left: -300%;
+    background-color: var(--white-color);
+    height: 100vh;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 300px 0px 0px rgba(0, 0, 0, 0.3);
+    padding: 40px 0px 0px 0px;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+    li {
+      width: 100%;
+      &:has(a.active) {
+        background-color: rgba(0, 0, 0, 0.1) !important;
+      }
+      :hover,
+      a.active {
+        text-decoration: none !important;
+      }
+      a {
+        font-size: 1rem !important;
+        color: var(--gray-color);
+      }
+    }
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .navbar li {
+    margin-bottom: 1rem;
+  }
+
+  #mobile {
+    display: block !important;
+  }
+}
+
+
+//  padding: 32px 50px 20px 50px;
+
+@media (max-width: 1400px) {
+  nav {
+    margin: 0 60px 0 20px !important;
+  }
+}
+@media (max-width: 1200px) {
+  nav {
+    margin: 0 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 0 -30px !important;
+  }
+}

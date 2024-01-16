@@ -1,0 +1,54 @@
+.hairCareContainer {
+  display: flex;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+  .left {
+    padding-top: 4rem;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 1rem 0;
+      line-height: 1.7rem;
+      color: var(--gray-color);
+    }
+    button {
+      width: fit-content;
+      padding: 1rem 1.5rem;
+      background-color: var(--blue-color);
+      color: var(--white-color);
+      font-size: 1.1rem;
+      border: none;
+      outline: none;
+      border-radius: 70px;
+      margin: 2rem 0 1rem;
+    }
+    span {
+      text-transform: uppercase;
+      color: var(--gray-color);
+    }
+  }
+  .right {
+    width: 48%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hairCareContainer {
+    flex-direction: column-reverse;
+    .left {
+      width: 100%;
+      text-align: center;
+      button {
+        margin: 2rem auto 1rem;
+      }
+    }
+    .right {
+      width: 100%;
+    }
+  }
+}

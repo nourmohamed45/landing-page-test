@@ -1,0 +1,6 @@
+export { default as Header } from "./1-header/Header.jsx"
+export { default as ProductDetails} from "./2-productDetails/ProductDetails.jsx"
+export { default as HairCarePromotion } from "./3-hairCarePromotion/HairCarePromotion.jsx"
+export { default as Features } from "./4-features/Features.jsx"
+export { default as ScalpMessagerExperience } from "./5-scalpMessagerExperience/ScalpMessagerExperience.jsx"
+export { default as Form } from "./6-form/Form.jsx"

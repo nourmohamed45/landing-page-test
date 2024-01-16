@@ -1,0 +1,35 @@
+@mixin grid($columns, $gap, $breakpoint: 768px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+
+  @media (max-width: $breakpoint) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-container {
+  margin: 5rem 0;
+  @include grid(3, 10px);
+
+  @media (max-width: 600px) {
+    @include grid(1, 50px); // Adjust for smaller screens
+  }
+  .box {
+    text-align: center;
+    img {
+      // max-width: 300px;
+      width: 120px;
+    }
+
+    .text {
+      padding: 25px 15px;
+      h3 {
+        margin: 1rem 0;
+      }
+      p {
+        color: var(--gray-color);
+      }
+    }
+  }
+}
